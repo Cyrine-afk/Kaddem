@@ -1,0 +1,22 @@
+package tn.esprit.spring.kaddem.entities;
+
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Set;
+
+@Entity
+@Getter
+@Setter
+@Table(name = "Universite")
+public class Universite implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="idUniversite")
+    private Integer idUniv;
+    private String nomUniv;
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<Departement> departements;
+}
