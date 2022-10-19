@@ -4,9 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import tn.esprit.spring.kaddem.entities.DetailEquipe;
 
-import java.util.Set;
-
 @Repository
 public interface DetailEquipeRepository extends JpaRepository<DetailEquipe,Long> {
-    Set<DetailEquipe> findAllByNameDetailEquipe (String n);
+    //Set<DetailEquipe> findAllByNameDetailEquipe (String n);
 }
