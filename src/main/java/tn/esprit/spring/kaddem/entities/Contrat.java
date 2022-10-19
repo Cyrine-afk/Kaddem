@@ -14,7 +14,7 @@ public class Contrat implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="idContrat")
-    private Integer idContrat; // Clé primaire
+    private Integer idContrat;
     private Date dateDebutContrat;
     private Date dateFinContrat;
     private boolean archive;
